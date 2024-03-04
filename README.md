@@ -1,5 +1,16 @@
 # Laboratorio 6 ---- WEB
 
+# Base de datos/Tabla creada 
+<h2> id  </h2>
+Es un int, 
+<h2> name_circuit </h2>
+<h2> country_circuit </h2>
+<h2> name_winner </h2>
+<h2> team </h2>
+<h2> date </h2>
+<h2> year </h2>
+<h2> highlights </h2>
+<h2> image_base64 </h2>
 
 # Puntos Elaborados
 - [ ] (30 puntos) Por implementar un comando npm lint que utilice eslint para mostrar que su código no tiene errores de estilo
