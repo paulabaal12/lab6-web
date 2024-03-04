@@ -28,7 +28,7 @@ app.get('/posts/:id', async (req, res) => {
     if (circuit) {
       res.status(200).json(circuit);
     } else {
-      res.status(404).send('Circuit not found');
+      res.status(400).send('Circuit not found');
     }
   } catch (error) {
     next(error);
