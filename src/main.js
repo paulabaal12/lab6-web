@@ -1,12 +1,12 @@
 import express from 'express';
-//import cors from 'cors';
+import cors from 'cors';
 import { getAllPosts, createPost, getPost, updatePost, deletePost } from '../db.js';
 
 const app = express();
-const port = 3002;
+const port = 3001;
 
 app.use(express.json());
-//app.use(cors());
+app.use(cors());
 
 // Error 500 al conectar con la base de datos o un error de código
 app.use((err, req, res, next) => {
