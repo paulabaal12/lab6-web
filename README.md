@@ -1,4 +1,4 @@
-# lab6-web
+# Laboratorio 6 ---- WEB
 
 
 # Puntos Elaborados
@@ -10,7 +10,7 @@
 - [ ] (5 puntos) Por escribir a un archivo de log.txt un detalle de cada endpoint llamado, que incluya la hora a la que fue llamado, el payload con el que se llamó y la respuesta que el endpoint envió.
 - [ ] (20 puntos) Por utilizar swaggerLinks to an external site. para crear documentación de sus endpoints
 - [ ] (10 puntos) Por soportar imágenes en formato base64 en al menos una propiedad de su blog
-- [ ] (10 puntos) Por implementar soporte para corsLinks to an external site.
+- [x] (10 puntos) Por implementar soporte para cors.
 - [x] (20 puntos) [Criterio subjetivo] Por entregar un README bien formateado y un commit history ordenado en su repositorio de git
 - [ ] (-200 puntos) Por enviar su carpeta node_modules a su repositorio de github
 - [x] (30 puntos) Por hacer un docker compose que le permita levantar 2 contenedores, uno para el app y el otro para la base de datos.
