@@ -1,5 +1,9 @@
+
+
+
 {
     "swagger": "3.0.0",
+    "type":"json",
     "info": {
       "version": "1.0.0",
       "title": "API de Circuitos",

@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import swaggerDocument from '../swagger.json' assert { type: 'json' };
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from '../swagger.json';
 import { getAllPosts, createPost, getPost, updatePost, deletePost } from '../db.js';
 import fs from 'fs';
 import path from 'path';
@@ -12,8 +12,7 @@ const port = 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const logFilePath = path.join(__dirname, '..', 'log.txt'); // Cambio aquí
-
+const logFilePath = path.join(__dirname, '..', 'log.txt'); 
 const logRequests = (req, res, next) => {
   const now = new Date();
   const logEntry = `[${now.toISOString()}] ${req.method} ${req.originalUrl}\nPayload: ${JSON.stringify(req.body)}\n`;
