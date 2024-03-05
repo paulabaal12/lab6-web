@@ -22,3 +22,7 @@ Response: "No Content"
 Payload: {}
 Response: "[{\"id\":3,\"name_circuit\":\"Autódromo Hermanos Rodríguez\",\"country_circuit\":\"México\",\"name_winner\":\"Max Vestappen\",\"team\":\"RED BULL \",\"date\":\"2023-10-29T06:00:00.000Z\",\"year\":2023,\"time_fastest_lap\":\"2:02:30.814\",\"highlights\":\"Bottas received a five-second time penalty for causing a collision\",\"image_base64\":\"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.espn.com.gt%2Fdeporte-motor%2Ff1%2Fnota%2F_%2Fid%2F11162982%2Fgran-premio-de-mexico-aumentan-precios-para-2023-venta-comienza-el-15-de-noviembre&psig=AOvVaw21KYnDAOE2-AdYc1_JcrwQ&ust=1709663785837000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjI3oig24QDFQAAAAAdAAAAABAD\"}]"
 
+[2024-03-05T22:08:52.103Z] GET /posts
+Payload: {}
+Response: "[{\"id\":3,\"name_circuit\":\"Autódromo Hermanos Rodríguez\",\"country_circuit\":\"México\",\"name_winner\":\"Max Vestappen\",\"team\":\"RED BULL \",\"date\":\"2023-10-29T06:00:00.000Z\",\"year\":2023,\"time_fastest_lap\":\"2:02:30.814\",\"highlights\":\"Bottas received a five-second time penalty for causing a collision\",\"image_base64\":\"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.espn.com.gt%2Fdeporte-motor%2Ff1%2Fnota%2F_%2Fid%2F11162982%2Fgran-premio-de-mexico-aumentan-precios-para-2023-venta-comienza-el-15-de-noviembre&psig=AOvVaw21KYnDAOE2-AdYc1_JcrwQ&ust=1709663785837000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjI3oig24QDFQAAAAAdAAAAABAD\"}]"
+
