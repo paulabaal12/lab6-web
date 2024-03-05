@@ -1,0 +1,24 @@
+[2024-03-05T18:13:05.428Z] GET /posts
+Payload: {}
+Response: "[{\"id\":3,\"name_circuit\":\"Autódromo Hermanos Rodríguez\",\"country_circuit\":\"México\",\"name_winner\":\"Max Verstappen\",\"team\":\"RED BULL\",\"date\":\"2023-10-29T06:00:00.000Z\",\"year\":2023,\"time_fastest_lap\":\"2:02:30.814\",\"highlights\":\"Bottas received a five-second time penalty for causing a collision\",\"image_base64\":\"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.espn.com.gt%2Fdeporte-motor%2Ff1%2Fnota%2F_%2Fid%2F11162982%2Fgran-premio-de-mexico-aumentan-precios-para-2023-venta-comienza-el-15-de-noviembre&psig=AOvVaw21KYnDAOE2-AdYc1_JcrwQ&ust=1709663785837000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjI3oig24QDFQAAAAAdAAAAABAD\"}]"
+
+[2024-03-05T18:13:09.811Z] GET /posts/3
+Payload: {}
+Response: "{\"id\":3,\"name_circuit\":\"Autódromo Hermanos Rodríguez\",\"country_circuit\":\"México\",\"name_winner\":\"Max Verstappen\",\"team\":\"RED BULL\",\"date\":\"2023-10-29T06:00:00.000Z\",\"year\":2023,\"time_fastest_lap\":\"2:02:30.814\",\"highlights\":\"Bottas received a five-second time penalty for causing a collision\",\"image_base64\":\"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.espn.com.gt%2Fdeporte-motor%2Ff1%2Fnota%2F_%2Fid%2F11162982%2Fgran-premio-de-mexico-aumentan-precios-para-2023-venta-comienza-el-15-de-noviembre&psig=AOvVaw21KYnDAOE2-AdYc1_JcrwQ&ust=1709663785837000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjI3oig24QDFQAAAAAdAAAAABAD\"}"
+
+[2024-03-05T18:13:41.223Z] POST /posts/
+Payload: {"name_circuit":"Autódromo Hermanos Rodríguez","country_circuit":"México","name_winner":"Sergio Pérez","team":"RED BULL ","date":"2023-10-29","year":2023,"time_fastest_lap":"2:02:30.814","highlights":"Bottas received a five-second time penalty for causing a collision","image_base64":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.espn.com.gt%2Fdeporte-motor%2Ff1%2Fnota%2F_%2Fid%2F11162982%2Fgran-premio-de-mexico-aumentan-precios-para-2023-venta-comienza-el-15-de-noviembre&psig=AOvVaw21KYnDAOE2-AdYc1_JcrwQ&ust=1709663785837000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjI3oig24QDFQAAAAAdAAAAABAD"}
+Response: "{\"fieldCount\":0,\"affectedRows\":1,\"insertId\":4,\"info\":\"\",\"serverStatus\":2,\"warningStatus\":0,\"changedRows\":0}"
+
+[2024-03-05T18:13:59.242Z] PUT /posts/3
+Payload: {"name_circuit":"Autódromo Hermanos Rodríguez","country_circuit":"México","name_winner":"Max Vestappen","team":"RED BULL ","date":"2023-10-29","year":2023,"time_fastest_lap":"2:02:30.814","highlights":"Bottas received a five-second time penalty for causing a collision","image_base64":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.espn.com.gt%2Fdeporte-motor%2Ff1%2Fnota%2F_%2Fid%2F11162982%2Fgran-premio-de-mexico-aumentan-precios-para-2023-venta-comienza-el-15-de-noviembre&psig=AOvVaw21KYnDAOE2-AdYc1_JcrwQ&ust=1709663785837000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjI3oig24QDFQAAAAAdAAAAABAD"}
+Response: "OK"
+
+[2024-03-05T18:14:07.076Z] DELETE /posts/4
+Payload: {"name_circuit":"Autódromo Hermanos Rodríguez","country_circuit":"México","name_winner":"Max Vestappen","team":"RED BULL ","date":"2023-10-29","year":2023,"time_fastest_lap":"2:02:30.814","highlights":"Bottas received a five-second time penalty for causing a collision","image_base64":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.espn.com.gt%2Fdeporte-motor%2Ff1%2Fnota%2F_%2Fid%2F11162982%2Fgran-premio-de-mexico-aumentan-precios-para-2023-venta-comienza-el-15-de-noviembre&psig=AOvVaw21KYnDAOE2-AdYc1_JcrwQ&ust=1709663785837000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjI3oig24QDFQAAAAAdAAAAABAD"}
+Response: "No Content"
+
+[2024-03-05T18:14:15.434Z] GET /posts
+Payload: {}
+Response: "[{\"id\":3,\"name_circuit\":\"Autódromo Hermanos Rodríguez\",\"country_circuit\":\"México\",\"name_winner\":\"Max Vestappen\",\"team\":\"RED BULL \",\"date\":\"2023-10-29T06:00:00.000Z\",\"year\":2023,\"time_fastest_lap\":\"2:02:30.814\",\"highlights\":\"Bottas received a five-second time penalty for causing a collision\",\"image_base64\":\"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.espn.com.gt%2Fdeporte-motor%2Ff1%2Fnota%2F_%2Fid%2F11162982%2Fgran-premio-de-mexico-aumentan-precios-para-2023-venta-comienza-el-15-de-noviembre&psig=AOvVaw21KYnDAOE2-AdYc1_JcrwQ&ust=1709663785837000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjI3oig24QDFQAAAAAdAAAAABAD\"}]"
+

@@ -1,19 +1,46 @@
 import express from 'express';
 import cors from 'cors';
 import { getAllPosts, createPost, getPost, updatePost, deletePost } from '../db.js';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
-const port = 3001;
+const port = 3000;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const logFilePath = path.join(__dirname, '..', 'log.txt'); // Cambio aquí
+
+const logRequests = (req, res, next) => {
+  const now = new Date();
+  const logEntry = `[${now.toISOString()}] ${req.method} ${req.originalUrl}\nPayload: ${JSON.stringify(req.body)}\n`;
+
+  const originalSend = res.send;
+  res.send = function(body) {
+    const logResponse = `Response: ${JSON.stringify(body)}\n\n`;
+    fs.appendFile(logFilePath, logEntry + logResponse, (err) => {
+      if (err) {
+        console.error('Error writing to log file:', err);
+      }
+    });
+    originalSend.call(this, body);
+  };
+
+  next();
+};
 
 app.use(express.json());
 app.use(cors());
+app.use(logRequests);
 
-// Error 500 al conectar con la base de datos o un error de código
+
+
+
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: 'Internal Server Error' });
 });
-
 
 /**
  * @swagger
@@ -194,6 +221,8 @@ app.use((req, res) => {
 });
 
 
+
+
 app.listen(port, () => {
   console.log(`Server listening at http://127.0.0.1:${port}`);
 });
@@ -224,3 +253,5 @@ app.listen(port, () => {
  *         image_base64:
  *           type: string
  */
+
+

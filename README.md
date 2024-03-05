@@ -2,7 +2,7 @@
 
 
 # Puntos Elaborados
-- [ ] (30 puntos) Por implementar un comando npm lint que utilice eslint para mostrar que su código no tiene errores de estilo
+- [] (30 puntos) Por implementar un comando npm lint que utilice eslint para mostrar que su código no tiene errores de estilo
       Para obtener estos puntos, deben utilizar los lineamientos de airbnb para evaluar su código y además, deben crear una regla custom que prohíba los punto y coma en su código.
 - [x] (15 puntos) Por implementar adecuadamente los status de error 500 cuando haya un problema contactando con la base de datos o un error de código
 - [x] (5 puntos) Por implementar el mensaje de error 501 cuando se trate de utilizar un metodo no implementado de http
