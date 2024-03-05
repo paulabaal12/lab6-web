@@ -1,0 +1,161 @@
+{
+    "swagger": "3.0.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "API de Circuitos",
+      "description": "Una API para gestionar circuitos"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": ["http"],
+    "paths": {
+      "/posts": {
+        "get": {
+          "summary": "Obtener todos los circuitos",
+          "responses": {
+            "200": {
+              "description": "Circuitos obtenidos correctamente",
+              "schema": {
+                "$ref": "#/definitions/Circuit"
+              }
+            }
+          }
+        },
+        "post": {
+          "summary": "Crear un nuevo circuito",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "Información del circuito",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Circuit"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Circuito creado correctamente",
+              "schema": {
+                "$ref": "#/definitions/Circuit"
+              }
+            },
+            "400": {
+              "description": "Cuerpo de la solicitud inválido"
+            }
+          }
+        }
+      },
+      "/posts/{id}": {
+        "get": {
+          "summary": "Obtener un circuito por ID",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "id",
+              "required": true,
+              "type": "integer"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Circuito obtenido correctamente",
+              "schema": {
+                "$ref": "#/definitions/Circuit"
+              }
+            },
+            "400": {
+              "description": "Circuito no encontrado"
+            }
+          }
+        },
+        "put": {
+          "summary": "Actualizar un circuito existente",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "id",
+              "required": true,
+              "type": "integer"
+            },
+            {
+              "in": "body",
+              "name": "body",
+              "description": "Información del circuito",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Circuit"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Circuito actualizado correctamente"
+            },
+            "400": {
+              "description": "Cuerpo de la solicitud inválido"
+            },
+            "404": {
+              "description": "Circuito no encontrado"
+            }
+          }
+        },
+        "delete": {
+          "summary": "Eliminar un circuito",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "id",
+              "required": true,
+              "type": "integer"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "Circuito eliminado correctamente"
+            },
+            "404": {
+              "description": "Circuito no encontrado"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Circuit": {
+        "type": "object",
+        "properties": {
+          "name_circuit": {
+            "type": "string"
+          },
+          "country_circuit": {
+            "type": "string"
+          },
+          "name_winner": {
+            "type": "string"
+          },
+          "team": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "time_fastest_lap": {
+            "type": "string"
+          },
+          "highlights": {
+            "type": "string"
+          },
+          "image_base64": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+  

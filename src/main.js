@@ -1,5 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from '../swagger.json';
 import { getAllPosts, createPost, getPost, updatePost, deletePost } from '../db.js';
 import fs from 'fs';
 import path from 'path';
@@ -33,7 +35,7 @@ const logRequests = (req, res, next) => {
 app.use(express.json());
 app.use(cors());
 app.use(logRequests);
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
 
