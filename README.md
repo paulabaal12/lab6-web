@@ -1,5 +1,6 @@
-# Laboratorio 6 ---- WEB
-<img src="" alt="F1" width="300" height="200"
+# Laboratorio 6/WEB
+![F1 svg](https://github.com/paulabaal12/lab6-web/assets/106341373/9117c4ce-6c4a-47d2-891e-58186129eb4a)
+
 # Base de datos/Tabla creada 
 <h4> id  </h4>
 Es de tipo INT y se establece como clave primaria (PRIMARY KEY). También se configura para incrementarse automáticamente (AUTO_INCREMENT), lo que significa que cada nueva fila insertada en la tabla se le asignará automáticamente un ID único.
@@ -24,8 +25,18 @@ Es de tipo TEXT. Se utiliza para almacenar la imagen de la carrera en formato Ba
 
 # Endpoints
 
+<h3> /posts: </h3>
+GET: Obtiene todos los posts almacenados en la base de datos.
+POST: Crea un nuevo post y lo guarda en la base de datos.
+
+<h3> /posts/:id: </h3>
+GET: Obtiene un post específico por su ID.
+PUT: Actualiza un post existente por su ID.
+DELETE: Elimina un post existente por su ID.
+
+
 # Puntos Elaborados
-- [] (30 puntos) Por implementar un comando npm lint que utilice eslint para mostrar que su código no tiene errores de estilo
+- [ ] (30 puntos) Por implementar un comando npm lint que utilice eslint para mostrar que su código no tiene errores de estilo
       Para obtener estos puntos, deben utilizar los lineamientos de airbnb para evaluar su código y además, deben crear una regla custom que prohíba los punto y coma en su código.
 - [x] (15 puntos) Por implementar adecuadamente los status de error 500 cuando haya un problema contactando con la base de datos o un error de código
 - [x] (5 puntos) Por implementar el mensaje de error 501 cuando se trate de utilizar un metodo no implementado de http
