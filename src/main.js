@@ -43,6 +43,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
+
 /**
  * @swagger
  * /posts:
@@ -58,7 +59,9 @@ app.use((err, req, res, next) => {
  *               items:
  *                 $ref: '#/components/schemas/Circuit'
  */
-app.get('/posts', async (req, res) => {
+
+
+app.get('/posts', async (req, res, next) => {
   try {
     const circuits = await getAllPosts();
     res.status(200).json(circuits);
@@ -66,6 +69,7 @@ app.get('/posts', async (req, res) => {
     next(error);
   }
 });
+
 
 /**
  * @swagger
@@ -169,7 +173,6 @@ app.put('/posts/:id', async (req, res) => {
     const id = req.params.id;
     const circuitData = req.body;
 
-    // Validación de datos de entrada
     if (!circuitData || Object.keys(circuitData).length === 0) {
       return res.status(400).send('Invalid request body');
     }
