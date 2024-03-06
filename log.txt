@@ -130,3 +130,11 @@ Response: "[{\"id\":3,\"name_circuit\":\"Autódromo Hermanos Rodríguez\",\"coun
 Payload: {}
 Response: "{\"id\":5,\"name_circuit\":\"Autodromo Nazionale Monza\",\"country_circuit\":\"Italia\",\"name_winner\":\"Charles Leclerc\",\"team\":\"Ferrari\",\"date\":\"2023-09-08T06:00:00.000Z\",\"year\":2019,\"time_fastest_lap\":\"1:21.779\",\"highlights\":\"Hamilton scored an additional point for setting the fastest lap of the race.\",\"image_base64\":\"https://www.racefans.net/wp-content/uploads/2019/09/racefansdotnet-20190907-145242-8.jpg\"}"
 
+[2024-03-06T02:09:35.312Z] GET /posts/
+Payload: {}
+Response: "[{\"id\":3,\"name_circuit\":\"Autódromo Hermanos Rodríguez\",\"country_circuit\":\"México\",\"name_winner\":\"Max Vestappen\",\"team\":\"RED BULL RACING HONDA RBPT \",\"date\":\"2023-10-29T06:00:00.000Z\",\"year\":2023,\"time_fastest_lap\":\"1:21.334\",\"highlights\":\"Bottas received a five-second time penalty for causing a collision\",\"image_base64\":\"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.espn.com.gt%2Fdeporte-motor%2Ff1%2Fnota%2F_%2Fid%2F11162982%2Fgran-premio-de-mexico-aumentan-precios-para-2023-venta-comienza-el-15-de-noviembre&psig=AOvVaw21KYnDAOE2-AdYc1_JcrwQ&ust=1709663785837000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjI3oig24QDFQAAAAAdAAAAABAD\"},{\"id\":5,\"name_circuit\":\"Autodromo Nazionale Monza\",\"country_circuit\":\"Italia\",\"name_winner\":\"Charles Leclerc\",\"team\":\"Ferrari\",\"date\":\"2023-09-08T06:00:00.000Z\",\"year\":2019,\"time_fastest_lap\":\"1:21.779\",\"highlights\":\"Hamilton scored an additional point for setting the fastest lap of the race.\",\"image_base64\":\"https://www.racefans.net/wp-content/uploads/2019/09/racefansdotnet-20190907-145242-8.jpg\"}]"
+
+[2024-03-06T02:09:35.386Z] GET /favicon.ico
+Payload: {}
+Response: "Not Implemented"
+
