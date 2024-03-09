@@ -138,3 +138,7 @@ Response: "[{\"id\":3,\"name_circuit\":\"Autódromo Hermanos Rodríguez\",\"coun
 Payload: {}
 Response: "Not Implemented"
 
+[2024-03-09T19:07:24.180Z] GET /
+Payload: {}
+Response: "Not Implemented"
+
