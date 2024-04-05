@@ -24,7 +24,7 @@ services:
         depends_on:
             - mysql
 
-        restart: always
+    
 
 
 

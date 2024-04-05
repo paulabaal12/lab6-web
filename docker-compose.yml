@@ -13,9 +13,7 @@ services:
     ports:
         - "3313:3306"
    
-    restart: always
-
-
+   
   app:
         build: ./
         container_name: blog_f1
@@ -26,8 +24,6 @@ services:
             - /usr/src/app/node_modules
         depends_on:
             - mysql
-
-        restart: always
 
 
 
