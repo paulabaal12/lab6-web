@@ -43,7 +43,6 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
-
 /**
  * @swagger
  * /posts:
@@ -59,9 +58,7 @@ app.use((err, req, res, next) => {
  *               items:
  *                 $ref: '#/components/schemas/Circuit'
  */
-
-
-app.get('/posts', async (req, res, next) => {
+app.get('/posts', async (req, res,next) => {
   try {
     const circuits = await getAllPosts();
     res.status(200).json(circuits);
@@ -92,7 +89,7 @@ app.get('/posts', async (req, res, next) => {
  *       400:
  *         description: Circuito no encontrado
  */
-app.get('/posts/:id', async (req, res) => {
+app.get('/posts/:id', async (req, res,next) => {
   try {
     const id = req.params.id;
     const circuit = await getPost(id);
@@ -127,7 +124,7 @@ app.get('/posts/:id', async (req, res) => {
  *       400:
  *         description: Cuerpo de la solicitud inválido
  */
-app.post('/posts', async (req, res) => {
+app.post('/posts', async (req, res,next) => {
   try {
     const { name_circuit, country_circuit, name_winner, team, date, year, time_fastest_lap, highlights, image_base64 } = req.body;
 
@@ -168,11 +165,12 @@ app.post('/posts', async (req, res) => {
  *       404:
  *         description: Circuito no encontrado
  */
-app.put('/posts/:id', async (req, res) => {
+app.put('/posts/:id', async (req, res,next) => {
   try {
     const id = req.params.id;
     const circuitData = req.body;
 
+    // Validación de datos de entrada
     if (!circuitData || Object.keys(circuitData).length === 0) {
       return res.status(400).send('Invalid request body');
     }
@@ -205,7 +203,7 @@ app.put('/posts/:id', async (req, res) => {
  *       404:
  *         description: Circuito no encontrado
  */
-app.delete('/posts/:id', async (req, res) => {
+app.delete('/posts/:id', async (req, res,next) => {
   try {
     const id = req.params.id;
     const result = await deletePost(id);
@@ -228,7 +226,7 @@ app.use((req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
+  console.log(`Server listening at localhost:${port}`);
 });
 
 /**
