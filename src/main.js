@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import swaggerDocument from '../swagger.json' assert { type: 'json' };
 import swaggerUi from 'swagger-ui-express';
-import { getAllPosts, createPost, getPost, updatePost, deletePost } from './db.js';
+import {getAllPosts, createPost, getPost, updatePost, deletePost , getAllUsers, getUser , createUser, updateUser, deleteUser } from './db.js';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -58,6 +58,15 @@ app.use((err, req, res, next) => {
  *               items:
  *                 $ref: '#/components/schemas/Circuit'
  */
+app.get('/users', async (req, res,next) => {
+  try {
+    const users = await getAllUsers();
+    res.status(200).json(users);
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.get('/posts', async (req, res,next) => {
   try {
     const circuits = await getAllPosts();
@@ -103,6 +112,21 @@ app.get('/posts/:id', async (req, res,next) => {
   }
 });
 
+
+app.get('/users/:id', async (req, res,next) => {
+  try {
+    const id = req.params.id;
+    const users = await getUser(id);
+    if (users) {
+      res.status(200).json(users);
+    } else {
+      res.status(400).send('User not found');
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
 /**
  * @swagger
  * /posts:
@@ -134,6 +158,23 @@ app.post('/posts', async (req, res,next) => {
     }
 
     const result = await createPost(name_circuit, country_circuit, name_winner, team, date, year, time_fastest_lap, highlights, image_base64);
+    res.status(200).json(result);
+  } catch (error) {
+    next(error);
+  }
+});
+
+
+app.post('/users', async (req, res,next) => {
+  try {
+    const {username, password, name } = req.body;
+
+    // Validación de datos de entrada
+    if (!username || !password || !name ) {
+      return res.status(400).send('Invalid request body');
+    }
+
+    const result = await createUser(username, password, name);
     res.status(200).json(result);
   } catch (error) {
     next(error);
@@ -186,6 +227,29 @@ app.put('/posts/:id', async (req, res,next) => {
   }
 });
 
+
+
+app.put('/users/:id', async (req, res,next) => {
+  try {
+    const id = req.params.id;
+    const userData = req.body;
+
+    // Validación de datos de entrada
+    if (!userData || Object.keys(userData).length === 0) {
+      return res.status(400).send('Invalid request body');
+    }
+
+    const result = await updateUser(id, userData);
+    if (result.affectedRows > 0) {
+      res.sendStatus(200);
+    } else {
+      res.status(404).send('Circuit not found');
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
 /**
  * @swagger
  * /posts/{id}:
@@ -216,6 +280,21 @@ app.delete('/posts/:id', async (req, res,next) => {
     next(error);
   }
 });
+
+app.delete('/users/:id', async (req, res,next) => {
+  try {
+    const id = req.params.id;
+    const result = await deleteUser(id);
+    if (result.affectedRows > 0) {
+      res.sendStatus(204);
+    } else {
+      res.status(404).send('User not found');
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
 
 // Error 501 al utilizar un método no implementado de HTTP
 app.use((req, res) => {
@@ -255,5 +334,4 @@ app.listen(port, () => {
  *         image_base64:
  *           type: string
  */
-
 
