@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import swaggerDocument from '../swagger.json' assert { type: 'json' };
 import swaggerUi from 'swagger-ui-express';
-import {getAllPosts, createPost, getPost, updatePost, deletePost , getAllUsers, getUser , createUser, updateUser, deleteUser } from './db.js';
+import { getAllPosts, createPost, getPost, updatePost, deletePost , getAllUsers, getUser , createUser, updateUser, deleteUser} from '../db.js';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';

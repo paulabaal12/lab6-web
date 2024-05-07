@@ -1,18 +1,6 @@
 version: '3.8'
 
 services:
-
-  app:
-    build: ./
-    container_name: blog_f1
-    ports:
-      - "22764:3000"
-    depends_on:
-      - mysql
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-
   mysql:
     image: mysql:latest
     environment:
@@ -25,4 +13,21 @@ services:
     ports:
       - "3313:3306"
 
+  app:
+        build: ./
+        container_name: blog_f1
+        ports:
+            - "22764:3000"
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+        depends_on:
+            - mysql 
 
+ 
+
+  
+
+    
+
+      

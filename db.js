@@ -1,5 +1,4 @@
-import conn from './conn.js'
-
+import conn from './conn.js';
 
 export async function getAllPosts() {
   try {
